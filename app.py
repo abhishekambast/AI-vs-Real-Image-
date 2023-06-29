@@ -4,9 +4,10 @@ import streamlit as st
 
 
 @st.cache(allow_output_mutation=True)
-
-with st.spinner('Model is being loaded..'):
-  curr_model=load_model('AIvsREAL.h5')
+def load_curr_model():
+    with st.spinner('Model is being loaded..'):
+        curr_model = load_model('AIvsREAL.h5')
+    return curr_model
 
 st.write("AI generated Images vs Real Images")
 
@@ -33,7 +34,7 @@ if file is None:
 else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
-    prediction = import_and_predict(image, curr_model)
+    prediction = import_and_predict(image, load_curr_model())
     
     st.write(prediction)
     
@@ -43,4 +44,4 @@ else:
         print("This is an AI generated Image")
     
     
-)
+
