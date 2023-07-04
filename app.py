@@ -84,4 +84,4 @@ else:
         st.write("This is an AI generated Image")
     
     
-st.markdown("Link to Github repository **:blue[https://github.com/abhishekambast/AI-vs-Real-Image-.git]**.)
+st.markdown("Link to Github repository **:blue[https://github.com/abhishekambast/AI-vs-Real-Image-.git]**.")
