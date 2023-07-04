@@ -35,7 +35,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/inline-images/AI-human-heads.jpg");
+             background-image: url("https://miro.medium.com/v2/resize:fit:1100/0*lRNifwVazId84bHf.");
              background-attachment: fixed;
              background-size: cover
          }}
