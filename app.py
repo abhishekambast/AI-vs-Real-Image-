@@ -29,12 +29,12 @@ def load_curr_model():
     return curr_model
 
 st.title("AI generated Images vs Real Images")
-st.write("By Abhishek Ambast.")
+
 
 
 file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png","jpeg"])
-st.markdown("This text is the link to dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
-st.write("By Abhishek Ambast.")
+st.markdown("\n\n\n This text is the link to dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
+st.write("\n\n By Abhishek Ambast.")
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
