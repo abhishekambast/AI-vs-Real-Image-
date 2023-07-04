@@ -28,19 +28,24 @@ def load_curr_model():
         curr_model = load_model('AIvsREAL.h5')
     return curr_model
 
-st.write("AI generated Images vs Real Images")
+st.title("AI generated Images vs Real Images")
+st.write("By Abhishek Ambast.")
+
 
 file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png","jpeg"])
+st.markdown("This text is the link to dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
+st.write("By Abhishek Ambast.")
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
 st.set_option('deprecation.showfileUploaderEncoding', False)
+
 def import_and_predict(image_data, model):
     
         size = (126,126)    
         image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
-        image = np.asarray(image)
-        img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        img = np.asarray(image)
+        
         
         
         img_reshape = img[np.newaxis,...]
@@ -58,9 +63,9 @@ else:
     st.write(prediction)
     
     if(np.argmax(prediction)==1):
-        print("This is a Real Image")
+        st.write("This is a Real Image")
     else:
-        print("This is an AI generated Image")
+        st.write("This is an AI generated Image")
     
     
 
