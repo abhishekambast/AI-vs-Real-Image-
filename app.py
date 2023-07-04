@@ -30,10 +30,26 @@ def load_curr_model():
 
 st.title("AI generated Images vs Real Images")
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://zh-prod-1cc738ca-7d3b-4a72-b792-20bd8d8fa069.storage.googleapis.com/s3fs-public/inline-images/AI-human-heads.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
 
 
-file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png","jpeg"])
-st.markdown("\n\n\n This text is the link to dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
+
+file = st.file_uploader("Please upload an image file", type=["jpg", "png","jpeg"])
+st.markdown("\n\n\Dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
 st.write("\n\n By Abhishek Ambast.")
 import cv2
 from PIL import Image, ImageOps
@@ -68,4 +84,4 @@ else:
         st.write("This is an AI generated Image")
     
     
-
+st.markdown("Link to Github repository **:blue[https://github.com/abhishekambast/AI-vs-Real-Image-.git]**.)
