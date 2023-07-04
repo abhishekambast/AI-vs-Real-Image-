@@ -49,7 +49,7 @@ add_bg_from_url()
 
 
 file = st.file_uploader("Please upload an image file", type=["jpg", "png","jpeg"])
-st.markdown("\n\n\Dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
+st.markdown("\n\n\n\n\n Dataset used for training this model **:blue[https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images]**.")
 st.write("\n\n By Abhishek Ambast.")
 import cv2
 from PIL import Image, ImageOps
